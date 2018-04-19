@@ -1,0 +1,6 @@
+node('node') {
+   stage('Stage  1') {
+    sleep 3
+    print 'downstream job stage 1'
+   }
+}
