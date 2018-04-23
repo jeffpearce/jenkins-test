@@ -9,6 +9,6 @@ node('node') {
        parameters: []
     };
 
-    parallel downstreamTasks       
+    parallel downstreamTasks
    }
 }
