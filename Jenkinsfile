@@ -1,15 +1,14 @@
-pipeline {
-  agent any
-  stages {
-    stage ('stage 1') {
-      steps {
-        sh 'echo stage 1 step 1'
-      }
-    }
-    stage ('stage 2') {
-      steps {
-        sh 'echo stage 2 step 1'
-      }
-    }
-  }
+node('node') {
+   stage('Stage  1') {
+    print 'upstream job stage 1';
+
+    def downstreamTasks = [:];
+
+    downstreamTasks["downstream"] = {
+       build job: 'Jeff Pearce/jenkins-test-downstream/master',
+       parameters: []
+    };
+
+    parallel downstreamTasks
+   }
 }
