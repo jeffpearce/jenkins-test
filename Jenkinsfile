@@ -16,4 +16,3 @@ node('node') {
      print 'stage 2, step 3'
    }
 }
-
