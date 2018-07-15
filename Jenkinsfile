@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'echo stage 2 step 1'
         script {
-          if (Math.abs(new Random().nextInt() % 100) < 10) {
+          if (Math.abs(new Random().nextInt() % 100) < 25) {
           error('fail on purpose');
           }
         }
