@@ -1,4 +1,4 @@
-def randomGenerator = new random()
+def randomGenerator = new Random()
 def shouldIFail(percentFail) {
   nextRand = Math.abs(randomGenerator.nextInt() % 100)
   print nextRand
