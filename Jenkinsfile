@@ -22,7 +22,6 @@ pipeline {
         sh 'echo stage 2 step 1'
         script {
           shouldIFail(25)
-          }
         }
       }
     }
@@ -31,7 +30,7 @@ pipeline {
         sh 'echo stage 3 step 1'
         script {
           shouldIFail(10)
-          }
+        }
       }
     }
   }
