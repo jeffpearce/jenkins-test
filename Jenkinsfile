@@ -1,4 +1,4 @@
-shouldIFail(percentFail) {
+def shouldIFail(percentFail) {
   nextRand = Math.abs(new Random().nextInt() % 100)
   print nextRand
   if (nextRand < percentFail) {
