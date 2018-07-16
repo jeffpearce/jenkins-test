@@ -1,5 +1,6 @@
 shouldIFail(percentFail) {
-  nextRand = Math.abs(new Random().nextInt() % 100
+  nextRand = Math.abs(new Random().nextInt() % 100)
+  print nextRand
   if (nextRand < percentFail) {
     error('fail on purpose');
   }
