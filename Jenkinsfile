@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh 'echo stage 1 step 1'
         script {
-          shouldIFail(25)
+          shouldIFail(30)
         }
       }
     }
