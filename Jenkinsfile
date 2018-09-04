@@ -1,4 +1,4 @@
-node('node') {
+node() {
    stage('Stage  1') {
      sleep 3
      print 'stage 1, step  1'
