@@ -1,13 +1,12 @@
 pipeline {
   agent any
-    parameters {
-        string(name: 'ENVIRONMENT', defaultValue: 'development', description: '')
-    }
+
+  options {
+      enforceBuildSchedule()
+  }
+
   stages {
     stage ('stage 1') {
-        environment {
-            DEPLOYMENT = "DEVELOPMENT"
-        }
       steps {
         sh 'echo stage 1 step 1'
       }
@@ -15,8 +14,11 @@ pipeline {
     stage ('stage 2') {
       steps {
         sh 'echo stage 2 step 1'
-        cobertura coberturaReportFile: 'coverage/*.xml'
-
+      }
+    }
+    stage ('stage 3') {
+      steps {
+        sh 'echo stage 3 step 1'
       }
     }
   }
