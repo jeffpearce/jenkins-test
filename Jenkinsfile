@@ -15,7 +15,7 @@ pipeline {
     stage ('stage 2') {
       steps {
         sh 'echo stage 2 step 1'
-        cobertura coberturaReportFile: 'coverage/*.xml'
+//        cobertura coberturaReportFile: 'coverage/*.xml'
 
       }
     }
